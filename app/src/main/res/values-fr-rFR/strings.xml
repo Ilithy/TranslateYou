@@ -1,4 +1,5 @@
 <resources>
+    <!-- test -->
     <string name="app_name">Translate You</string>
     <string name="libre_translate">LibreTranslate</string>
 
