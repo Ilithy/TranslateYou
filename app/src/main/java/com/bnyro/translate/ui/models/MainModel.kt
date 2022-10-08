@@ -9,9 +9,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.bnyro.translate.DatabaseHolder.Companion.Db
 import com.bnyro.translate.api.ApiHelper
-import com.bnyro.translate.api.lt.LTHelper
-import com.bnyro.translate.api.lv.LVHelper
-import com.bnyro.translate.constants.ApiType
 import com.bnyro.translate.db.obj.HistoryItem
 import com.bnyro.translate.ext.Query
 import com.bnyro.translate.obj.Language
@@ -20,15 +17,8 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import kotlinx.coroutines.launch
 
 class MainModel : ViewModel() {
-    private val apiHelper: ApiHelper = when (
-        Preferences.get(
-            Preferences.apiTypeKey,
-            ApiType.LIBRE_TRANSLATE
-        )
-    ) {
-        ApiType.LIBRE_TRANSLATE -> LTHelper()
-        else -> LVHelper()
-    }
+    private val apiHelper: ApiHelper
+        get() = Preferences.getApiHelper()
 
     var availableLanguages: List<Language> by mutableStateOf(
         emptyList()
@@ -48,10 +38,6 @@ class MainModel : ViewModel() {
 
     var translatedText: String by mutableStateOf(
         ""
-    )
-
-    var showHistory: Boolean by mutableStateOf(
-        false
     )
 
     private fun getLanguageByPrefKey(key: String): Language? {
@@ -77,7 +63,7 @@ class MainModel : ViewModel() {
         )
     }
 
-    private fun translate() {
+    fun translate() {
         if (insertedText == "" || targetLanguage == sourceLanguage) {
             translatedText = ""
             return
