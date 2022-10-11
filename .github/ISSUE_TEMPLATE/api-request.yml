@@ -20,6 +20,7 @@ body:
       description: |
         If you have an API key, useful for the developer to test the operation of the translation engine.
       placeholder: |
+          "..."
     validations:
       required: true
 
