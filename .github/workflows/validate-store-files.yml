@@ -32,8 +32,7 @@ jobs:
             console.log("");
             let error = false;
             // for each locale
-            const listings = "./fastlane/metadata/android";
-            const listings = "./app/standard/standard/fastlane/metadata/android";
+            const listings = "./fastlane/metadata/android", "./app/standard/standard/fastlane/metadata/android"
             readdirSync(listings)
               .map(locale => [locale, join(listings, locale)])
               .filter(([locale, path]) => lstatSync(path).isDirectory())
