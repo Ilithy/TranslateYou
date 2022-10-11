@@ -2,11 +2,8 @@ package com.bnyro.translate.util
 
 import android.content.Context
 import android.content.SharedPreferences
-import com.bnyro.translate.api.ApiHelper
-import com.bnyro.translate.api.lt.LTHelper
-import com.bnyro.translate.api.lv.LVHelper
-import com.bnyro.translate.constants.ApiType
 import com.bnyro.translate.constants.ThemeMode
+import com.bnyro.translate.constants.TranslationEngines
 
 object Preferences {
     const val instanceUrlKey = "instanceUrl"
@@ -56,22 +53,24 @@ object Preferences {
         ).toInt()
     }
 
-    fun defaultInstanceUrl() = when (
-        get(apiTypeKey, ApiType.LIBRE_TRANSLATE)
-    ) {
-        ApiType.LINGVA_TRANSLATE -> "https://lingva.ml"
-        else -> "https://libretranslate.de"
-    }
+    fun getTranslationEngine(): TranslationEngine = TranslationEngines.engines[
+        get(
+            apiTypeKey,
+            0
+        )
+    ]
 
-    fun getApiHelper(): ApiHelper {
-        return when (
-            get(
-                apiTypeKey,
-                ApiType.LIBRE_TRANSLATE
-            )
-        ) {
-            ApiType.LIBRE_TRANSLATE -> LTHelper()
-            else -> LVHelper()
-        }
-    }
+    fun getUrlByEngine(
+        engine: TranslationEngine
+    ) = get(
+        engine.name + instanceUrlKey,
+        engine.defaultUrl
+    )
+
+    fun getApiKeyByEngine(
+        engine: TranslationEngine
+    ) = get(
+        engine.name + apiKey,
+        ""
+    )
 }

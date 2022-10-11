@@ -13,7 +13,8 @@ import androidx.compose.ui.unit.dp
 fun BlockRadioButton(
     selected: Int = 0,
     onSelect: (Int) -> Unit,
-    items: List<String>
+    items: List<String>,
+    content: @Composable () -> Unit
 ) {
     Column {
         Row(
@@ -28,9 +29,10 @@ fun BlockRadioButton(
                     text = item,
                     selected = selected == index
                 ) {
-                    onSelect(index)
+                    onSelect.invoke(index)
                 }
             }
         }
+        content.invoke()
     }
 }

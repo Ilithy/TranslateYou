@@ -1,13 +1,18 @@
 package com.bnyro.translate.api.lt
 
-import com.bnyro.translate.api.ApiHelper
+import com.bnyro.translate.api.APIHelper
+import com.bnyro.translate.constants.TranslationEngines
 import com.bnyro.translate.obj.Language
 import com.bnyro.translate.util.Preferences
-import com.bnyro.translate.util.RetrofitInstance
+import com.bnyro.translate.util.RetrofitHelper
 
-class LTHelper : ApiHelper() {
+class LTHelper() : APIHelper() {
+    private val api: LibreTranslate = RetrofitHelper.createApi(
+        TranslationEngines.libreTranslate,
+        LibreTranslate::class.java
+    )
     override suspend fun getLanguages(): List<Language> {
-        return RetrofitInstance.libreTranslate.getLanguages().toMutableList().apply {
+        return api.getLanguages().toMutableList().apply {
             add(
                 0,
                 Language(
@@ -22,10 +27,12 @@ class LTHelper : ApiHelper() {
         query: String,
         source: String,
         target: String
-    ): String = RetrofitInstance.libreTranslate.translate(
+    ): String = api.translate(
         query,
         source,
         target,
-        Preferences.get(Preferences.apiKey, "")
+        Preferences.getApiKeyByEngine(
+            TranslationEngines.libreTranslate
+        )
     ).translatedText
 }

@@ -1,16 +1,22 @@
 package com.bnyro.translate.api.lv
 
-import com.bnyro.translate.api.ApiHelper
+import com.bnyro.translate.api.APIHelper
+import com.bnyro.translate.constants.TranslationEngines
 import com.bnyro.translate.obj.Language
-import com.bnyro.translate.util.RetrofitInstance
+import com.bnyro.translate.util.RetrofitHelper
 
-class LVHelper : ApiHelper() {
+class LVHelper() : APIHelper() {
+    private val api: LingvaTranslate = RetrofitHelper.createApi(
+        TranslationEngines.lingvaTranslate,
+        LingvaTranslate::class.java
+    )
+
     override suspend fun getLanguages(): List<Language> {
-        return RetrofitInstance.lingvaTranslate.getLanguages().languages
+        return api.getLanguages().languages
     }
 
     override suspend fun translate(query: String, source: String, target: String): String {
-        return RetrofitInstance.lingvaTranslate.translate(
+        return api.translate(
             source,
             target,
             query
