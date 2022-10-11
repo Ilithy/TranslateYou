@@ -27,7 +27,9 @@ body:
   - type: textarea
     id: details
     attributes:
-      label: Other details and useful links about Api or translate engine.
+      label: Details and links
+      description: |
+        Other details and useful links about Api and/or translate engine.
       placeholder: |
         Additional details, links and attachments.
 
