@@ -1,1 +1,2 @@
 Translator built with Material Design 3 (You) supporting multiple translation engines
+Added lines for the validate store file test purpose
