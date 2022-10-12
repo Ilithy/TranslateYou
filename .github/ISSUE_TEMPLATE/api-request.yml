@@ -1,5 +1,5 @@
-name: api-request
-description: Submit a request for the integration of a new translation API
+name: API support request
+description: Submit a request for the integration of a new translation API in Translate You
 labels: [New API]
 body:
 
