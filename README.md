@@ -23,7 +23,6 @@
 - [x] Dark and light theme
 - [x] Entirely Open Source
 - [X] Written in Jetpack Compose 
-- [X] Does not require any permission
 - [X] Support native Android sharing system
 - [X] Multilingual interface
 
@@ -33,17 +32,19 @@
 [<img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png" alt="Get it on IzzyOnDroid" height="80">](https://apt.izzysoft.de/fdroid/index/apk/com.bnyro.translate)
 [<img src="ghbadge.png" alt="Get it on GitHub" height="80">](https://github.com/bnyro/translateyou/releases)
 
-## Different versions
-There are currently two different versions available:
+<!-- ---------- App Versions ---------- -->
+## Versions
+**There are currently two different versions of TY available:**
 
-#### Translate You Libre
+### Translate You Libre
 Only supports the <a href="https://github.com/LibreTranslate/LibreTranslate">LibreTranslate API</a> and therefore is fully libre.
 
-#### Translate You Plus
+### Translate You Plus
+[**NonFreeNet anti-feature**](https://f-droid.org/docs/Anti-Features/#NonFreeNet)
+
 Additionally supports:
-* <a href="https://github.com/thedaviddelta/lingva-translate">LingvaTranslate</a> _which uses Google Translate to fetch translations._
-* <a href="https://www.deepl.com/translator">Deepl translator</a>.
-and thus owns the NonFreeNet anti-feature.
+* <a href="https://github.com/thedaviddelta/lingva-translate">LingvaTranslate</a> _which uses Google Translate® to fetch translations._
+* <a href="https://www.deepl.com/translator">Deepl translator®</a>.
 
 ## Screenshots
 
