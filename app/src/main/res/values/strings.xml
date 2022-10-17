@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Translate You</string>
+    <string name="app_name" translatable="false">Translate You</string>
 
     <!-- Dialog -->
     <string name="okay">Okay</string>
@@ -8,7 +8,9 @@
     <!-- Text -->
     <string name="enter_text">Enter text</string>
     <string name="paste">Paste</string>
+    <string name="copy">Copy</string>
     <string name="auto">Auto</string>
+    <string name="language_not_supported">Language is not supported!</string>
 
     <!-- Settings -->
     <string name="instance">Instance</string>
@@ -20,11 +22,14 @@
     <string name="fetch_delay">Translation delay</string>
     <string name="fetch_delay_summary">The delay between inserting text and fetching the translation</string>
     <string name="history_summary">Keep track of the last translated texts</string>
+    <string name="required">Required</string>
+    <string name="optional">Optional</string>
 
     <!-- About -->
     <string name="github" translatable="false">GitHub</string>
     <string name="author">Author</string>
     <string name="license">License</string>
+    <string name="privacy_policy">Privacy Policy</string>
 
     <!-- Theme -->
     <string name="theme_auto">System</string>

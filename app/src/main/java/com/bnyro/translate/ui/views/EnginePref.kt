@@ -11,8 +11,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.bnyro.translate.R
-import com.bnyro.translate.constants.ApiKeyState
-import com.bnyro.translate.constants.TranslationEngines
+import com.bnyro.translate.const.ApiKeyState
+import com.bnyro.translate.const.TranslationEngines
 import com.bnyro.translate.ui.components.BlockRadioButton
 import com.bnyro.translate.ui.components.prefs.EditTextPreference
 import com.bnyro.translate.util.Preferences
@@ -32,13 +32,13 @@ fun EnginePref() {
 
     var instanceUrl by remember {
         mutableStateOf(
-            Preferences.getUrlByEngine(engines[selected])
+            engines[selected].getUrl()
         )
     }
 
     var apiKey by remember {
         mutableStateOf(
-            Preferences.getApiKeyByEngine(engines[selected])
+            engines[selected].getApiKey()
         )
     }
 
@@ -51,8 +51,8 @@ fun EnginePref() {
                 Preferences.apiTypeKey,
                 selected
             )
-            instanceUrl = Preferences.getUrlByEngine(engines[selected])
-            apiKey = Preferences.getApiKeyByEngine(engines[selected])
+            instanceUrl = engines[selected].getUrl()
+            apiKey = engines[selected].getApiKey()
             TranslationEngines.update()
         },
         content = {
@@ -64,11 +64,10 @@ fun EnginePref() {
 
                 if (this.urlModifiable) {
                     EditTextPreference(
-                        preferenceKey = this.name + Preferences.instanceUrlKey,
+                        preferenceKey = this.urlPrefKey,
                         value = instanceUrl,
                         onValueChange = {
                             instanceUrl = it
-                            TranslationEngines.update()
                         },
                         labelText = stringResource(R.string.instance)
                     )
@@ -81,11 +80,15 @@ fun EnginePref() {
 
                 if (this.apiKeyState != ApiKeyState.DISABLED) {
                     EditTextPreference(
-                        preferenceKey = this.name + Preferences.apiKey,
+                        preferenceKey = this.apiPrefKey,
                         value = apiKey,
                         labelText = stringResource(
                             id = R.string.api_key
-                        )
+                        ) + when (apiKeyState) {
+                            ApiKeyState.REQUIRED -> " (${stringResource(R.string.required)})"
+                            ApiKeyState.OPTIONAL -> " (${stringResource(R.string.optional)})"
+                            else -> ""
+                        }
                     ) {
                         apiKey = it
                     }
