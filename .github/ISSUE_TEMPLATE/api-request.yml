@@ -11,9 +11,9 @@ body:
       options:
         - label: This translation engine requires a registered account.
           required: false
-        - label: This translation engine requires an api key (free)
+        - label: This translation engine requires an free api key.
           required: false
-        - label: This translation engine requires an API key (paid).
+        - label: This translation engine requires an paid api key.
           required: false
 
   - type: textarea
