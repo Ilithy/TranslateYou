@@ -24,6 +24,18 @@ body:
     validations:
       required: false
 
+- type: input
+    id: API_Endpoint
+    attributes:
+      label: Translation engine service endpoint(s)
+      description: |
+        Please specify here the translation API endpoint(s) _(if known)_.
+      placeholder: |
+          "..."
+    validations:
+      required: false
+
+
   - type: textarea
     id: details
     attributes:
