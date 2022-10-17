@@ -24,6 +24,17 @@ body:
     validations:
       required: false
 
+  - type: input
+    id: API_endpoint
+    attributes:
+      label: Translation engine endpoint
+      description: |
+        "If you know API key endpoint, useful for the developer to test the operation of the translation engine."
+      placeholder: |
+          "..."
+    validations:
+      required: false
+
   - type: textarea
     id: details
     attributes:
