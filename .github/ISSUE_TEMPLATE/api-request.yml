@@ -3,19 +3,6 @@ description: Submit a request for the integration of a new translation API in Tr
 labels: [New API]
 body:
 
-- type: checkboxes
-    id: API_Info
-    attributes:
-      label: API basic informations
-      description: Your issue will be closed if you haven't verify these elements.
-      options:
-        - label: This translation engine requires a registered account.
-          required: false
-        - label: This translation engine requires an free api key.
-          required: false
-        - label: This translation engine requires an paid api key.
-          required: false
-
   - type: textarea
     id: general-informations-about-api
     attributes:
