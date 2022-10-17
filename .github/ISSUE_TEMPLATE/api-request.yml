@@ -18,7 +18,7 @@ body:
     attributes:
       label: Translation engine api key
       description: |
-        If you have an API key, useful for the developer to test the operation of the translation engine.
+        "If you have an API key, useful for the developer to test the operation of the translation engine."
       placeholder: |
           "..."
     validations:
@@ -29,7 +29,7 @@ body:
     attributes:
       label: Translation engine service endpoints
       description: |
-        Please specify here the translation API endpoint(s) _(if known)_.
+        "Please specify here the translation API endpoint(s) _(if known)_."
       placeholder: |
           "..."
     validations:
