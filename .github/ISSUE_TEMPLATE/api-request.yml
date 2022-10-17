@@ -4,7 +4,7 @@ labels: [New API]
 body:
 
 - type: checkboxes
-    id: API-Info
+    id: API_Info
     attributes:
       label: API basic informations
       description: Your issue will be closed if you haven't verify these elements.
