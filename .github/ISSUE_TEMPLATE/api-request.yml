@@ -27,7 +27,7 @@ body:
 - type: input
     id: API_Endpoint
     attributes:
-      label: Translation engine service endpoint(s)
+      label: Translation engine service endpoints
       description: |
         Please specify here the translation API endpoint(s) _(if known)_.
       placeholder: |
