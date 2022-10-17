@@ -17,7 +17,6 @@ body:
     id: API-Info
     attributes:
       label: API basic informations
-      description: Your issue will be closed if you haven't verify these elements.
       options:
         - label: This translation engine requires a registered account.
           required: false
