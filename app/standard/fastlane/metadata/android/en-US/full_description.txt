@@ -1,30 +1,21 @@
 <i>Translate You</i> is a supercharged version of <a href="https://apt.izzysoft.de/packages/com.bnyro.translate/">Translate You libre</a> 
 
-Able, among other things:
-- [x] Translate more than 150 supported languages
+Features:
+- Translate from or to more than 150 languages
 Thanks to the support of numerous translation APIs;
 Libre translate, Lingva translate, Deepl and MyMemory engines.
-- [x] Designed with Material Design 3 (You)
-Beauty, simplicity, functionality in the line of sight
-- [x] Dark and light theme
-To follow your desires.
-- [x] Entirely Open Source
+- Designed with Material Design 3 (You)
+Beauty, simplicity, functionality in the line of sight.
+- Entirely Open Source
 Your privacy matters to us, our source code is auditable;
 our privacy policy is clear and accessible.
-- [X] Written in Jetpack Compose
-Code with a native and flexible language
-- [X] Support native Android sharing system
-Ease of use, seamlessly integrates into Android
-- [X] Multilingual interface
-Lovingly translated by our user community
-
-Translate from or to more than 150 languages.
-To use several translation engines via their APIs
-Perform translations using several simultaneous translation engines
-Save your translations, regardless of the engines used
-
-
-
-<i>Translate You</i> is a Translator App built with <a href="https://m3.material.io/">Material Design 3 (You)</a> supporting different translation engines. Supported engines are <a href="https://github.com/LibreTranslate/LibreTranslate">LibreTranslate</a>, which supports more than 30 languages and <a href="https://github.com/thedaviddelta/lingva-translate">LingvaTranslate</a> which uses Google Translate as a backend, thus causing the NonFreeNet anti-feature.
-
-There's also a <a href="https://apt.izzysoft.de/packages/com.bnyro.translate/">libre version</a> of the app which refrains from using Lingva and therefore doesn't have the anti-feature.
+- Written in Jetpack Compose
+Coded with a native and flexible language.
+- Support native Android sharing system
+Ease of use, seamlessly integrates into Android.
+- Multilingual interface
+Lovingly translated by our user community.
+- Translation History
+Save your translations, regardless of the engines used.
+- Dark and light theme
+To follow your desires, everytimes.
