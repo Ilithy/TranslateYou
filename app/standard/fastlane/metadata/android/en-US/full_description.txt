@@ -1,10 +1,27 @@
 <i>Translate You</i> is a supercharged version of <a href="https://apt.izzysoft.de/packages/com.bnyro.translate/">Translate You libre</a> 
 
-able, among other things:
-* Translate from or to more than 150 languages.
-* To use several translation engines via their APIs
-* Perform translations using several simultaneous translation engines
-* Save your translations, regardless of the engines used
+Able, among other things:
+- [x] Translate more than 150 supported languages
+Thanks to the support of numerous translation APIs;
+Libre translate, Lingva translate, Deepl and MyMemory engines.
+- [x] Designed with Material Design 3 (You)
+Beauty, simplicity, functionality in the line of sight
+- [x] Dark and light theme
+To follow your desires.
+- [x] Entirely Open Source
+Your privacy matters to us, our source code is auditable;
+our privacy policy is clear and accessible.
+- [X] Written in Jetpack Compose
+Code with a native and flexible language
+- [X] Support native Android sharing system
+Ease of use, seamlessly integrates into Android
+- [X] Multilingual interface
+Lovingly translated by our user community
+
+Translate from or to more than 150 languages.
+To use several translation engines via their APIs
+Perform translations using several simultaneous translation engines
+Save your translations, regardless of the engines used
 
 
 
