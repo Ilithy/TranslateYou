@@ -1,7 +1,7 @@
 package com.bnyro.translate.api.lv
 
-import android.util.Log
 import com.bnyro.translate.const.ApiKeyState
+import com.bnyro.translate.ext.expOrNull
 import com.bnyro.translate.obj.Definition
 import com.bnyro.translate.obj.Language
 import com.bnyro.translate.obj.Translation
@@ -37,7 +37,6 @@ class LVEngine : TranslationEngine(
             target,
             URLHelper.encodeURL(query)
         )
-        Log.e("defs", response.info?.definitions.toString())
         return Translation(
             translatedText = URLHelper.decodeURL(response.translation),
             detectedLanguage = response.info?.detectedSource,
@@ -47,9 +46,9 @@ class LVEngine : TranslationEngine(
                 ?.map {
                     Definition(
                         type = it.type,
-                        definition = it.list.first().definition,
-                        example = it.list.first().example,
-                        synonym = it.list.first().synonyms.first()
+                        definition = expOrNull { it.list.first().definition },
+                        example = expOrNull { it.list.first().example },
+                        synonym = expOrNull { it.list.first().synonyms.first() }
                     )
                 }
         )
