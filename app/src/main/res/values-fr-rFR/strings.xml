@@ -23,7 +23,7 @@
     <string name="history_summary">Gardez une trace des derniers textes traduits</string>
     <string name="required">Obligatoire</string>
     <string name="optional">Optionnel</string>
-    <string name="compact_history">historique compact</string>
+    <string name="compact_history">Historique compact</string>
     <string name="compact_history_summary">N\'affiche par défaut que les 3 premières lignes de texte dans l\'historique</string>
     <string name="simultaneous_translation">Traduction simultanée</string>
     <string name="simultaneous_translation_summary">Récupérer les résultats de plusieurs moteurs de traduction simultanément.</string>
